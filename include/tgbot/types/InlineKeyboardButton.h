@@ -28,6 +28,8 @@ public:
      */
     std::string text;
 
+    std::string style;
+
     /**
      * @brief Optional. HTTP or tg:// URL to be opened when the button is pressed.
      *

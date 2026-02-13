@@ -1869,6 +1869,8 @@ std::string TgTypeParser::parseKeyboardButton(const KeyboardButton::Ptr& object)
     std::string result;
     result += '{';
     appendToJson(result, "text", object->text);
+    if(object->style.size())
+        appendToJson(result, "style", object->style);
     appendToJson(result, "request_users", parseKeyboardButtonRequestUsers(object->requestUsers));
     appendToJson(result, "request_chat", parseKeyboardButtonRequestChat(object->requestChat));
     appendToJson(result, "request_contact", object->requestContact);
@@ -2038,6 +2040,8 @@ std::string TgTypeParser::parseInlineKeyboardButton(const InlineKeyboardButton::
     std::string result;
     result += '{';
     appendToJson(result, "text", object->text);
+    if(object->style.size())
+        appendToJson(result, "style", object->style);
     appendToJson(result, "url", object->url);
     appendToJson(result, "callback_data", object->callbackData);
     appendToJson(result, "web_app", parseWebAppInfo(object->webApp));

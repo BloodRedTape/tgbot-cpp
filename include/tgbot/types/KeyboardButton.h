@@ -33,6 +33,7 @@ public:
      * If none of the optional fields are used, it will be sent as a message when the button is pressed
      */
     std::string text;
+    std::string style;
 
     /**
      * @brief Optional. If specified, pressing the button will open a list of suitable users.
